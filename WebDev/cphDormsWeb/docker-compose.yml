@@ -1,0 +1,7 @@
+services:
+    web:
+        container_name: node
+        restart: always
+        build: .
+        ports:
+            - '3000:3000'
