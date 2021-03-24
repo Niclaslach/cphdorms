@@ -18,14 +18,6 @@ router.get('/json', (req, res) => {
   })
 })
 
-/*  This route sends text back as plain text. */
-router.get('/send', (req, res) => {
-  res.send('This is the Send Route')
-})
 
-/*  This route redirects requests to Turbo360. */
-router.get('/redirect', (req, res) => {
-  res.redirect('https://www.turbo360.co/landing')
-})
 
 module.exports = router
