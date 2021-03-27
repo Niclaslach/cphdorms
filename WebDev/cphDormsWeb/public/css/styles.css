@@ -1,15 +1,19 @@
 @charset "UTF-8";
-.container {
+
+
+
+.content-container {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "c01 c02" "c03 c02";
+    margin: 2%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
 @media (max-width: 800px) {
-    .container {
+    .content-container {
         grid-template-columns: 1fr;
         grid-template-areas: "c01" "c02" "c03";
     }
