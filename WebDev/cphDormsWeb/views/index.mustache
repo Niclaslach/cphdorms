@@ -107,11 +107,15 @@
       accessToken: 'pk.eyJ1IjoibmljbGFzMSIsImEiOiJja240ZTFkNDkwMXZ3MnZwODc4amc5OThuIn0.H0fe6vJNOO_CTtyij8dSWQ'
     }).addTo(mymap);
 
-    L.marker([55.660495, 12.590023]).addTo(mymap).bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
+    var marker = L.marker([55.660495, 12.590023]).addTo(mymap).bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
     //marker.bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2");
     //marker.on('click', function (e) {
     //  this.openPopup();
     //});
+    {{#dorms}}
+      L.marker([55.6+(Math.random()-.5)/2, 12.6+(Math.random()-.5)/2]).addTo(mymap).bindPopup("<b>{{name}}</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
+      console.log('Run1')
+    {{/dorms}}
   </script>
 
 
