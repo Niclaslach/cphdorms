@@ -8,13 +8,7 @@ const router = express.Router()
   Data is rendered using the Mustache templating engine. For more
   information, view here: https://mustache.github.io/#demo */
 router.get('/tietgen', (req, res) => {
-  const kkik = req.app.get('kkik');
-  console.log(kkik)
   res.render('tietgen')
-})
-
-router.get('/', (req, res) => {
-  res.render('index')
 })
 
 /*  This route render json data */
@@ -26,6 +20,12 @@ router.get('/json', (req, res) => {
   })
 })
 
+router.get('/', (req, res) => {
+  const kkik = req.app.get('kkik');
+  console.log(kkik.length)
+  const xvar = ['Dorm1', 'Dorm2']
+  res.render('index', {dorms: kkik})
+})
 
 
 module.exports = router

@@ -67,6 +67,9 @@
 
 
 
+
+      {{#dorms}}
+
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
@@ -74,13 +77,19 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">{{name}}</h5>
+              <p class="card-text">BlaBla to be decided.</p>
+              <p class="card-text"><small class="text-muted">{{address}}</small></p>
             </div>
           </div>
         </div>
       </div>
+
+      {{/dorms}}
+
+
+
+
 
    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
@@ -98,11 +107,11 @@
       accessToken: 'pk.eyJ1IjoibmljbGFzMSIsImEiOiJja240ZTFkNDkwMXZ3MnZwODc4amc5OThuIn0.H0fe6vJNOO_CTtyij8dSWQ'
     }).addTo(mymap);
 
-    var marker = L.marker([55.660495, 12.590023]).addTo(mymap);
-    marker.bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2");
-    marker.on('click', function (e) {
-      this.openPopup();
-    });
+    L.marker([55.660495, 12.590023]).addTo(mymap).bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
+    //marker.bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2");
+    //marker.on('click', function (e) {
+    //  this.openPopup();
+    //});
   </script>
 
 

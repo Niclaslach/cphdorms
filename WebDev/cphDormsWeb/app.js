@@ -33,7 +33,7 @@ let rawdata = fs.readFileSync(jsonPath);
 let kkik = JSON.parse(rawdata);
 
 app.set('kkik', kkik)
-console.log(kkik)
+//console.log(kkik)
 
 // import routes
 const index = require('./routes/index')
