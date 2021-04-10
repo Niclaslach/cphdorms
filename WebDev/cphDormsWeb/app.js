@@ -23,6 +23,18 @@ const config = {
 
 vertex.configureApp(app, config)
 
+
+//load data
+const fs = require('fs');
+const path = require('path');
+
+const jsonPath = path.join(__dirname, '..', '..', 'Scraper', 'json_kkik.json');
+let rawdata = fs.readFileSync(jsonPath);
+let kkik = JSON.parse(rawdata);
+
+app.set('kkik', kkik)
+//console.log(kkik)
+
 // import routes
 const index = require('./routes/index')
 const api = require('./routes/api') // sample API Routes

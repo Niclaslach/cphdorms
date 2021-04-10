@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cphDorms</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+ 
 </head>
 
 
@@ -58,7 +63,12 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
+
+
+
+
+    {{#dorms}}
 
       <div class="card mb-3">
         <div class="row g-0">
@@ -67,13 +77,47 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">{{name}}</h5>
+              <p class="card-text">BlaBla to be decided.</p>
+              <p class="card-text"><small class="text-muted">{{address}}</small></p>
             </div>
           </div>
         </div>
       </div>
 
+    {{/dorms}}
+
+
+
+
+
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+
+   <div id="mapid"></div>  
+  <script>
+    var mymap = L.map('mapid').setView([55.65, 12.4], 11);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 18,
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      accessToken: 'pk.eyJ1IjoibmljbGFzMSIsImEiOiJja240ZTFkNDkwMXZ3MnZwODc4amc5OThuIn0.H0fe6vJNOO_CTtyij8dSWQ'
+    }).addTo(mymap);
+
+    var marker = L.marker([55.660495, 12.590023]).addTo(mymap).bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
+    //marker.bindPopup("<b>Tietgen</b><br>5000dkk for 20m^2");
+    //marker.on('click', function (e) {
+    //  this.openPopup();
+    //});
+    {{#dorms}}
+      L.marker([55.6+(Math.random()-.5)/2, 12.6+(Math.random()-.5)/2]).addTo(mymap).bindPopup("<b>{{name}}</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
+    {{/dorms}}
+  </script>
+
+  <script src="/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
