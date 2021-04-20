@@ -115,7 +115,7 @@
     //  this.openPopup();
     //});
     {{#dorms}}
-      L.marker([55.6+(Math.random()-.5)/2, 12.6+(Math.random()-.5)/2]).addTo(mymap).bindPopup("<b>{{name}}</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
+      L.marker([{{coordinates.latitude}}, {{coordinates.longitude}}]).addTo(mymap).bindPopup("<b>{{name}}</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()});
     {{/dorms}}
   </script>
 
