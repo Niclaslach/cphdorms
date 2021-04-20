@@ -20,6 +20,14 @@ router.get('/json', (req, res) => {
   })
 })
 
+router.get('/dorm/:dormUUID', (req, res) => {
+  const uuid = req.params.dormUUID
+  console.log('UUID: '+uuid)
+  const dorm = getDormByUuid(req.app.get('kkik'),uuid)
+  res.render('dorm_template', dorm)
+})
+
+
 router.get('/', (req, res) => {
   const kkik = req.app.get('kkik');
   console.log(kkik.length)
@@ -29,3 +37,13 @@ router.get('/', (req, res) => {
 
 
 module.exports = router
+
+
+function getDormByUuid(dorms, uuid) {
+  for (dorm of dorms) {
+    if (dorm.uuid == uuid) {
+      return dorm
+    }
+  }
+  return 0
+}
