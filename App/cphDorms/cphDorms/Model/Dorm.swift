@@ -1,5 +1,5 @@
 //
-//  Dorms.swift
+//  Dorm.swift
 //  cphDorms
 //
 //  Created by Niclas Lach on 23.04.21.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Dorms: Decodable, Identifiable {
+struct Dorm: Decodable, Identifiable {
     var id: String {
         return uuid
     }
