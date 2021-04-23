@@ -11,6 +11,9 @@
 		A5B84E2C2633432B00DEF36B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E2B2633432B00DEF36B /* ContentView.swift */; };
 		A5B84E2E2633432C00DEF36B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B84E2D2633432C00DEF36B /* Assets.xcassets */; };
 		A5B84E312633432C00DEF36B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B84E302633432C00DEF36B /* Preview Assets.xcassets */; };
+		A5B84E3D263345EB00DEF36B /* json_kkik.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B84E3C263345EB00DEF36B /* json_kkik.json */; };
+		A5B84E412633463600DEF36B /* Dorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E402633463600DEF36B /* Dorms.swift */; };
+		A5B84E452633469100DEF36B /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E442633469100DEF36B /* ContentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		A5B84E2D2633432C00DEF36B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5B84E302633432C00DEF36B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5B84E322633432C00DEF36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B84E3C263345EB00DEF36B /* json_kkik.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json_kkik.json; sourceTree = "<group>"; };
+		A5B84E402633463600DEF36B /* Dorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dorms.swift; sourceTree = "<group>"; };
+		A5B84E442633469100DEF36B /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +58,11 @@
 		A5B84E282633432B00DEF36B /* cphDorms */ = {
 			isa = PBXGroup;
 			children = (
+				A5B84E392633451500DEF36B /* View */,
+				A5B84E3B2633451F00DEF36B /* ViewModel */,
+				A5B84E3A2633451B00DEF36B /* Model */,
 				A5B84E292633432B00DEF36B /* cphDormsApp.swift */,
-				A5B84E2B2633432B00DEF36B /* ContentView.swift */,
+				A5B84E3F263345F100DEF36B /* Resources */,
 				A5B84E2D2633432C00DEF36B /* Assets.xcassets */,
 				A5B84E322633432C00DEF36B /* Info.plist */,
 				A5B84E2F2633432C00DEF36B /* Preview Content */,
@@ -67,6 +76,38 @@
 				A5B84E302633432C00DEF36B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5B84E392633451500DEF36B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5B84E2B2633432B00DEF36B /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5B84E3A2633451B00DEF36B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5B84E402633463600DEF36B /* Dorms.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5B84E3B2633451F00DEF36B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A5B84E442633469100DEF36B /* ContentModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A5B84E3F263345F100DEF36B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5B84E3C263345EB00DEF36B /* json_kkik.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B84E3D263345EB00DEF36B /* json_kkik.json in Resources */,
 				A5B84E312633432C00DEF36B /* Preview Assets.xcassets in Resources */,
 				A5B84E2E2633432C00DEF36B /* Assets.xcassets in Resources */,
 			);
@@ -139,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B84E2C2633432B00DEF36B /* ContentView.swift in Sources */,
+				A5B84E452633469100DEF36B /* ContentModel.swift in Sources */,
 				A5B84E2A2633432B00DEF36B /* cphDormsApp.swift in Sources */,
+				A5B84E412633463600DEF36B /* Dorms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

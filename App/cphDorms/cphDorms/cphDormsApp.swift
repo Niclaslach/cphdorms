@@ -12,6 +12,7 @@ struct cphDormsApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ContentModel())
         }
     }
 }
