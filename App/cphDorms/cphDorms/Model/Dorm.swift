@@ -17,17 +17,21 @@ struct Dorm: Decodable, Identifiable {
     let address: String
     let dormPictureLink: String
     struct coordinates: Decodable {
-        let latitude: String
-        let longitude: String
+        let latitude: Double?
+        let longitude: Double?
     }
-    let description: String
+    let description: [String]
     let rooms: [Rooms]
     
+    let maxPrice: Double
+    let minPrice: Double
+    let maxSize: Double
+    let minSize: Double
 }
 
 
 struct Rooms: Decodable {
     let roomType: String
-    let size: String
-    let price: String
+    let size: Double
+    let price: Double
 }

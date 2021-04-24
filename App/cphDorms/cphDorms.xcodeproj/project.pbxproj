@@ -11,12 +11,13 @@
 		A5B84E2C2633432B00DEF36B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E2B2633432B00DEF36B /* ContentView.swift */; };
 		A5B84E2E2633432C00DEF36B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B84E2D2633432C00DEF36B /* Assets.xcassets */; };
 		A5B84E312633432C00DEF36B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B84E302633432C00DEF36B /* Preview Assets.xcassets */; };
-		A5B84E3D263345EB00DEF36B /* json_kkik.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B84E3C263345EB00DEF36B /* json_kkik.json */; };
 		A5B84E412633463600DEF36B /* Dorm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E402633463600DEF36B /* Dorm.swift */; };
 		A5B84E452633469100DEF36B /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E442633469100DEF36B /* ContentModel.swift */; };
 		A5B84E4E263351C100DEF36B /* AllDormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E4D263351C100DEF36B /* AllDormsView.swift */; };
 		A5B84E54263357D800DEF36B /* DormMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E53263357D800DEF36B /* DormMatchView.swift */; };
 		A5B84E58263365DB00DEF36B /* DormRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E57263365DB00DEF36B /* DormRow.swift */; };
+		A5B84E642634858000DEF36B /* json_kkik.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B84E632634858000DEF36B /* json_kkik.json */; };
+		A5B84E672634864400DEF36B /* Universities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B84E662634864400DEF36B /* Universities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +27,13 @@
 		A5B84E2D2633432C00DEF36B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5B84E302633432C00DEF36B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5B84E322633432C00DEF36B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5B84E3C263345EB00DEF36B /* json_kkik.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json_kkik.json; sourceTree = "<group>"; };
 		A5B84E402633463600DEF36B /* Dorm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dorm.swift; sourceTree = "<group>"; };
 		A5B84E442633469100DEF36B /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		A5B84E4D263351C100DEF36B /* AllDormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDormsView.swift; sourceTree = "<group>"; };
 		A5B84E53263357D800DEF36B /* DormMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormMatchView.swift; sourceTree = "<group>"; };
 		A5B84E57263365DB00DEF36B /* DormRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormRow.swift; sourceTree = "<group>"; };
+		A5B84E632634858000DEF36B /* json_kkik.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = json_kkik.json; sourceTree = "<group>"; };
+		A5B84E662634864400DEF36B /* Universities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Universities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B84E402633463600DEF36B /* Dorm.swift */,
+				A5B84E662634864400DEF36B /* Universities.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,7 +117,7 @@
 		A5B84E3F263345F100DEF36B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A5B84E3C263345EB00DEF36B /* json_kkik.json */,
+				A5B84E632634858000DEF36B /* json_kkik.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -176,7 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B84E3D263345EB00DEF36B /* json_kkik.json in Resources */,
+				A5B84E642634858000DEF36B /* json_kkik.json in Resources */,
 				A5B84E312633432C00DEF36B /* Preview Assets.xcassets in Resources */,
 				A5B84E2E2633432C00DEF36B /* Assets.xcassets in Resources */,
 			);
@@ -196,6 +199,7 @@
 				A5B84E452633469100DEF36B /* ContentModel.swift in Sources */,
 				A5B84E2A2633432B00DEF36B /* cphDormsApp.swift in Sources */,
 				A5B84E412633463600DEF36B /* Dorm.swift in Sources */,
+				A5B84E672634864400DEF36B /* Universities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
