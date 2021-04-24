@@ -61,21 +61,12 @@
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        Photo 1
+                        <img src="{{dormPictureLink}}" alt="{{name}}" width=100%>
                     </div>
-                    <div class="carousel-item">
-                        Photo 2
-                    </div>
-                    <div class="carousel-item">
-                        Photo 3
-                    </div>
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                     data-bs-slide="prev">
@@ -91,7 +82,9 @@
         </div>
         <div class="info placeholder">
             I am information. <br>
-            {{description}}
+            {{#description}}
+                <p>{{.}}</p>
+            {{/description}}
         </div>
         <div class="map placeholder">
             I am a map.
