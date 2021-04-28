@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Campus" representedClassName="Campus" syncable="YES" codeGenerationType="class">
+        <attribute name="abbreviation" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="dorm_abbreviation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="University" inverseName="abbreviation" inverseEntity="University"/>
+    </entity>
+    <entity name="Dorm" representedClassName="Dorm" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="dormDiscription" optional="YES" attributeType="String"/>
+        <attribute name="dormPictureLink" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="uuid" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Room" inverseName="dorm_uuid" inverseEntity="Room"/>
+    </entity>
+    <entity name="Room" representedClassName="Room" syncable="YES" codeGenerationType="class">
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="roomType" optional="YES" attributeType="String"/>
+        <attribute name="size" optional="YES" attributeType="Double" usesScalarValueType="YES"/>
+        <relationship name="dorm_uuid" maxCount="1" deletionRule="Nullify" destinationEntity="Dorm" inverseName="uuid" inverseEntity="Dorm"/>
+    </entity>
+    <entity name="University" representedClassName="University" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="abbreviation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Campus" inverseName="dorm_abbreviation" inverseEntity="Campus"/>
+    </entity>
+    <elements>
+        <element name="Campus" positionX="157.4141845703125" positionY="-22.55642700195312" width="128" height="118"/>
+        <element name="Dorm" positionX="-187.0316772460938" positionY="-136.7516479492188" width="128" height="148"/>
+        <element name="Room" positionX="-197.0642700195312" positionY="44.16827392578125" width="128" height="103"/>
+        <element name="University" positionX="177.45458984375" positionY="-142.3208312988281" width="128" height="73"/>
+    </elements>
+</model>
