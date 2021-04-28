@@ -1,5 +1,5 @@
 //
-//  DormMatchView.swift
+//  MatchView.swift
 //  cphDorms
 //
 //  Created by Niclas Lach on 23.04.21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DormMatchView: View {
+struct MatchView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,7 +15,7 @@ struct DormMatchView: View {
 
 struct DormMatchView_Previews: PreviewProvider {
     static var previews: some View {
-        DormMatchView()
+        MatchView()
         
     }
 }

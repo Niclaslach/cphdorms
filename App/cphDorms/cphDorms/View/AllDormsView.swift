@@ -11,12 +11,12 @@ struct AllDormsView: View {
     
     @EnvironmentObject var viewModel: ContentModel
     @State private var showFilter = false
+    @State var dormSearch = DormSearch()
+    
     
     var body: some View {
         NavigationView {
-            
             ScrollView {
-                
                 LazyVStack {
                     
                     ForEach(viewModel.dorms.indices) { index in
@@ -27,9 +27,6 @@ struct AllDormsView: View {
                                 destination:
                                     Text("destination"),
                                 label: {
-                                    
-                                    // Learning Card
-                                    //Text(dorm.name)
                                     DormRow(dorm: viewModel.dorms[index], image: viewModel.dormImages[index])
                                 })
                             
@@ -41,19 +38,33 @@ struct AllDormsView: View {
                 .padding()
                 
             }
-            .navigationTitle(" CPH Dorms")
-            .toolbar {
-                NavigationLink (
-                    destination: Text("Filter"),
-                    label: {
-                        HStack {
-                            Image(systemName: "line.horizontal.3.decrease.circle")
-                            //Text("Filter")
-                        }
-                    })
+            .navigationTitle("CPH Dorms")
+            .navigationBarItems(trailing: filter)
+//                NavigationLink (
+//                    destination: Text("Filter"),
+//                    label: {
+//                        HStack {
+//                            Image(systemName: "line.horizontal.3.decrease.circle")
+//                            //Text("Filter")
+//                        }
+//                    })
+        }
+        //.navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    var filter: some View {
+        Button(action: { self.showFilter = true }) {
+            HStack {
+                Image(systemName: "line.horizontal.3.decrease.circle")
+                Text("Filter")
             }
         }
+        .sheet(isPresented: $showFilter, content: {
+            FilterDormsView(dormSearch: self.$dormSearch, showFilter: self.$showFilter)
+        })
+        
     }
+    
 }
 
 struct FilterView: View {

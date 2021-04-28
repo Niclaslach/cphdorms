@@ -17,7 +17,7 @@ struct ContentView: View {
                         Text("All Dorms")
                     }
                 }.tag(1)
-            DormMatchView()
+            MatchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass.circle")
                     Text("Find Dorm")

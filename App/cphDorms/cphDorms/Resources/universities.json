@@ -1,0 +1,48 @@
+[
+    {
+        "abbreviation": "CBS",
+        "name": "Copenhagen Business School",
+        "campuses": [
+            {
+                "name": "Porcelaenshaven",
+                "abbreviation": "PH",
+                "coordinates": {
+                    "latitude": 55.678457564158094,
+                    "longitude": 12.523524998922962
+                }
+            },
+            {
+                "name": "Solbjerg Plads",
+                "abbreviation": "SP",
+                "coordinates": {
+                    "latitude": 55.68164513393999,
+                    "longitude": 12.529744333172575
+                }
+            },
+            {
+                "name": "Howitzvej",
+                "abbreviation": "HV",
+                "coordinates": {
+                    "latitude": 55.680605359242506,
+                    "longitude": 12.513958170138054
+                }
+            },
+            {
+                "name": "Dalgas Have",
+                "abbreviation": "DH",
+                "coordinates": {
+                    "latitude": 55.68376848414125,
+                    "longitude": 12.515470700163412
+                }
+            },
+            {
+                "name": "Examination Halls, Amager Strandvej",
+                "abbreviation": "EX",
+                "coordinates": {
+                    "latitude": 55.6612111130519,
+                    "longitude": 12.63209145807549
+                }
+            }
+        ]
+    }
+]

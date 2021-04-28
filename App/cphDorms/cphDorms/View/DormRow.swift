@@ -49,9 +49,10 @@ struct DormRow: View {
                     
                     // Description
                     Text(dorm.address)
-                        .padding(.bottom, 20)
                         .font(.caption)
+                        .lineLimit(2)
                     
+                    Spacer()
                     // Icons
                     HStack {
                         

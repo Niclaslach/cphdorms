@@ -10,6 +10,8 @@ import SwiftUI
 class ContentModel: ObservableObject {
     @Published var dorms = [Dorm]()
     
+    @Published var currentDormIndex = 0
+    
     @Published private(set) var dormImages = [UIImage?]()
     
     init() {
@@ -77,3 +79,10 @@ class ContentModel: ObservableObject {
     }
 }
 
+
+struct DormSearch {
+    var campus: Campus?
+    var maxDistance: Double?
+    var minSize: Double?
+    var maxPrice: Double?
+}
