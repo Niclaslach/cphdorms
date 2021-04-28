@@ -1,80 +1,48 @@
-{
-    "CBS": {
-        "PH": {
-            "latitude": 55.678457564158094,
-            "longitude": 12.523524998922962
-        },
-        "SP": {
-            "latitude": 55.68164513393999,
-            "longitude": 12.529744333172575
-        },
-        "HVN": {
-            "latitude": 55.680605359242506,
-            "longitude": 12.513958170138054
-        },
-        "DAL": {
-            "latitude": 55.68376848414125,
-            "longitude": 12.515470700163412
-        },
-        "EX": {
-            "latitude": 55.6612111130519,
-            "longitude": 12.63209145807549
-        }
-    },
-    "KU": {
-        "NG": {
-            "latitude": 55.68153202501458,
-            "longitude": 12.572234242746347
-        },
-        "SC": {
-            "latitude": 55.66217328914266,
-            "longitude": 12.590191915819213
-        },
-        "CSS": {
-            "latitude": 55.68803109660769,
-            "longitude": 12.570066249754506
-        },
-        "NTV": {
-            "latitude": 55.67977411014314,
-            "longitude": 12.542042812416511
-        },
-        "SVF": {
-            "latitude": 55.69249308764194,
-            "longitude": 12.563438683027025
-        }
-    },
-    "ITU": {
-        "latitude": 55.65958143853813,
-        "longitude": 12.591022493605957
-    },
-    "AaU": {
-        "latitude": 55.65051237853689,
-        "longitude": 12.54309209966222
-    },
-    "UCC": {
-        "CLB": {
-            "latitude": 55.6648800517043,
-            "longitude": 12.536179634380899
-        },
-        "KSV": {
-            "latitude": 55.69085187073967,
-            "longitude": 12.534438658442685
-        },
-        "CSG": {
-            "latitude": 55.703970724143005,
-            "longitude": 12.55476926716447
-        },
-        "TV": {
-            "latitude": 55.70226242072612,
-            "longitude": 12.550277282985851
-        }
-    },
-    "DKK": {
-        "latitude": 55.681677108045875,
-        "longitude": 12.60359340077151
-    },
-    "RMC": {
-        "latitude": 55.682760956198955,
-        "longitude": 12.606883298923028
+[
+    {
+        "abbreviation": "CBS",
+        "name": "Copenhagen Business School",
+        "campuses": [
+            {
+                "name": "Porcelaenshaven",
+                "abbreviation": "PH",
+                "coordinates": {
+                    "latitude": 55.678457564158094,
+                    "longitude": 12.523524998922962
+                }
+            },
+            {
+                "name": "Solbjerg Plads",
+                "abbreviation": "SP",
+                "coordinates": {
+                    "latitude": 55.68164513393999,
+                    "longitude": 12.529744333172575
+                }
+            },
+            {
+                "name": "Howitzvej",
+                "abbreviation": "HV",
+                "coordinates": {
+                    "latitude": 55.680605359242506,
+                    "longitude": 12.513958170138054
+                }
+            },
+            {
+                "name": "Dalgas Have",
+                "abbreviation": "DH",
+                "coordinates": {
+                    "latitude": 55.68376848414125,
+                    "longitude": 12.515470700163412
+                }
+            },
+            {
+                "name": "Examination Halls, Amager Strandvej",
+                "abbreviation": "EX",
+                "coordinates": {
+                    "latitude": 55.6612111130519,
+                    "longitude": 12.63209145807549
+                }
+            }
+        ]
     }
-}
+]
