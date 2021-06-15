@@ -50,6 +50,8 @@
         </div>
     </nav>
 
+    <div id="mapid"></div>  
+
     <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
@@ -58,8 +60,13 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title"><a href=tietgen>Tietgen</a></h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">Rooms are in the size of <strong>25.2m<sup>2</sup> - 49.8m<sup>2</sup></strong></p>
+              <p class="card-text">
+                Rooms are in the price range of 
+                <strong>2957dkk - 5754dkk</strong>
+              </p>
+              <br>
+              <p class="card-text"><small class="text-muted">Rued Langgaards Vej 10, 2300 København</small></p>
             </div>
           </div>
         </div>
@@ -100,9 +107,9 @@
       integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
       crossorigin=""></script>
 
-   <div id="mapid"></div>  
+   
   <script>
-    var mymap = L.map('mapid').setView([55.65, 12.4], 11);
+    var mymap = L.map('mapid').setView([55.68, 12.52], 11);
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 18,
@@ -118,7 +125,7 @@
     //  this.openPopup();
     //});
     {{#dorms}}
-      try {const {{uuid}} = L.marker([{{coordinates.latitude}}, {{coordinates.longitude}}]).addTo(mymap).bindPopup("<b>{{name}}</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()}); } catch {}
+      try { L.marker([{{coordinates.latitude}}, {{coordinates.longitude}}]).addTo(mymap).bindPopup("<b>{{name}}</b><br>5000dkk for 20m^2").on('click', function (e) {this.openPopup()}); } catch {}
     {{/dorms}}
   </script>
 
